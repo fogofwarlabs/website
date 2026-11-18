@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="512" height="512">
+  <title>Fog of War Labs</title>
+  <defs>
+    <!-- diagonal brushed-steel frame: light from the upper left -->
+    <linearGradient id="steel" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#f6faff"/>
+      <stop offset="0.22" stop-color="#b9cbe0"/>
+      <stop offset="0.44" stop-color="#4b6687"/>
+      <stop offset="0.52" stop-color="#e2edfa"/>
+      <stop offset="0.72" stop-color="#8aa3c2"/>
+      <stop offset="1" stop-color="#26394f"/>
+    </linearGradient>
+    <linearGradient id="bevel" x1="0.85" y1="0" x2="0.15" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.35"/>
+    </linearGradient>
+    <!-- the sight circle: clear in the middle, fading gently into the fog -->
+    <radialGradient id="sight" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.35" stop-color="#fff"/>
+      <stop offset="0.7" stop-color="#fff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="hex">
+      <polygon points="130,22 223.5307,76 223.5307,184 130,238 36.4693,184 36.4693,76"/>
+    </clipPath>
+    <mask id="revealed">
+      <rect width="260" height="260" fill="#000"/>
+      <circle cx="130" cy="130" r="96" fill="url(#sight)"/>
+    </mask>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <!-- 30 degree diamond grid on the regular hexagon: a lattice vertex at the centre, every frame edge on a lattice line
+         (three tile heights to the slanted edges, three half widths to the vertical edges) -->
+    <pattern id="tiles" width="62.3538" height="36" x="98.8231" y="130" patternUnits="userSpaceOnUse">
+      <path d="M0 18 L31.1769 0 L62.3538 18 L31.1769 36 Z" fill="none" stroke="#3fd39a" stroke-width="1.4"/>
+    </pattern>
+    <radialGradient id="ground" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#14614a"/>
+      <stop offset="1" stop-color="#0a3a2b"/>
+    </radialGradient>
+  </defs>
+
+  <polygon points="130,22 223.5307,76 223.5307,184 130,238 36.4693,184 36.4693,76" fill="#38d6ff" opacity="0.18" filter="url(#soft)"/>
+  <g clip-path="url(#hex)">
+    <!-- fog of war: black -->
+    <rect x="30" y="18" width="200" height="224" fill="#000"/>
+    <!-- revealed terrain -->
+    <g mask="url(#revealed)">
+      <rect x="30" y="18" width="200" height="224" fill="url(#ground)"/>
+      <rect x="30" y="18" width="200" height="224" fill="url(#tiles)" opacity="0.9"/>
+    </g>
+  </g>
+  <polygon points="130,22 223.5307,76 223.5307,184 130,238 36.4693,184 36.4693,76" fill="none" stroke="#02060c" stroke-width="13"/>
+  <polygon points="130,22 223.5307,76 223.5307,184 130,238 36.4693,184 36.4693,76" fill="none" stroke="url(#steel)" stroke-width="8"/>
+  <polygon points="130,22 223.5307,76 223.5307,184 130,238 36.4693,184 36.4693,76" fill="none" stroke="url(#bevel)" stroke-width="1.5" transform="translate(130 130) scale(1.03) translate(-130 -130)"/>
+</svg>

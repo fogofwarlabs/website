@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+  <defs>
+    <radialGradient id="field-fade" cx="730" cy="284" r="497" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 88) scale(1 .69)">
+      <stop offset="0" stop-color="white"/>
+      <stop offset=".48" stop-color="white" stop-opacity=".72"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="field-mask" x="0" y="0" width="1000" height="560" maskUnits="userSpaceOnUse">
+      <path d="M0 0h1000v560H0z" fill="url(#field-fade)"/>
+    </mask>
+    <radialGradient id="terrain-light" cx="739" cy="266" r="344" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 101) scale(1 .62)">
+      <stop offset="0" stop-color="#14614a" stop-opacity=".65"/>
+      <stop offset=".55" stop-color="#0a3a2b" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#0a3a2b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" x="707.79" y="116" width="152.42" height="88" patternUnits="userSpaceOnUse">
+      <path d="M0 44 76.21 0 152.42 44 76.21 88Z" fill="none" stroke="#3fd39a" stroke-width="1.15" stroke-opacity=".53"/>
+      <circle cy="44" r="2" fill="#3fd39a" fill-opacity=".44"/>
+      <circle cx="76.21" r="2" fill="#3fd39a" fill-opacity=".44"/>
+    </pattern>
+    <linearGradient id="steel" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6faff"/>
+      <stop offset=".27" stop-color="#8aa3c2"/>
+      <stop offset=".59" stop-color="#d7e8f9"/>
+      <stop offset="1" stop-color="#26394f"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1=".18" x2=".79" y2="1">
+      <stop offset="0" stop-color="#b9f3ff"/>
+      <stop offset=".45" stop-color="#38d6ff"/>
+      <stop offset="1" stop-color="#1477c9"/>
+    </linearGradient>
+    <linearGradient id="green" x1=".15" x2=".82" y2="1">
+      <stop offset="0" stop-color="#c1f9e9"/>
+      <stop offset=".44" stop-color="#3fd39a"/>
+      <stop offset="1" stop-color="#14614a"/>
+    </linearGradient>
+    <linearGradient id="plate-reflection" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".66"/>
+      <stop offset=".54" stop-color="#d7faff" stop-opacity=".04"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".37"/>
+    </linearGradient>
+    <linearGradient id="front-left" x2="0" y2="1">
+      <stop offset="0" stop-color="#253748"/>
+      <stop offset="1" stop-color="#0d1723"/>
+    </linearGradient>
+    <linearGradient id="front-right" x2="0" y2="1">
+      <stop offset="0" stop-color="#192b3c"/>
+      <stop offset="1" stop-color="#080d16"/>
+    </linearGradient>
+    <filter id="tile-glow" x="-25%" width="150%" y="-30%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <path id="ground-cell" d="M0-44 76.21 0 0 44-76.21 0Z"/>
+    <path id="tile-top" d="M0-40 69.28 0 0 40-69.28 0Z"/>
+    <path id="tile-inset" d="M0-36 62.35 0 0 36-62.35 0Z"/>
+    <g id="tile-base">
+      <path d="M-69.28 0 0 40V59L-69.28 19Z" fill="url(#front-left)" stroke="#4b6687"/>
+      <path d="M0 40 69.28 0V19L0 59Z" fill="url(#front-right)" stroke="#4b6687"/>
+      <path d="m-63 9 57 33m12 0L63 9M-62 16l21 12m83 0 20-12" fill="none" stroke="url(#steel)" stroke-opacity=".37"/>
+      <path d="m-66 3 66 38L66 3" fill="none" stroke="currentColor" stroke-opacity=".7"/>
+    </g>
+    <g id="plate-detail" fill="none">
+      <path d="M0-34 58.9 0 0 34-58.9 0Z" stroke="#edfaff" stroke-opacity=".49"/>
+      <path d="M-43.3 3 0 28 43.3 3M-41.57-12 0-36 12.13-29" stroke="#051f35" stroke-opacity=".35"/>
+      <path d="M-56-4 0-36 57-4 7 6-32 12Z" fill="url(#plate-reflection)" opacity=".64"/>
+      <path d="m-32.9-5 18-10m29 30 18-10" stroke="#f4fdff" stroke-opacity=".57"/>
+    </g>
+  </defs>
+
+  <g mask="url(#field-mask)">
+    <path d="M0 0h1000v560H0z" fill="url(#terrain-light)"/>
+    <path d="M0 0h1000v560H0z" fill="url(#grid)"/>
+    <g stroke="#3fd39a" stroke-opacity=".34" stroke-width="1.3">
+      <use href="#ground-cell" x="402.95" y="204" fill="#0a3a2b" fill-opacity=".5"/>
+      <use href="#ground-cell" x="555.37" y="116" fill="#14614a" fill-opacity=".24"/>
+      <use href="#ground-cell" x="479.16" y="248" fill="#14614a" fill-opacity=".28"/>
+      <use href="#ground-cell" x="555.37" y="380" fill="#14614a" fill-opacity=".36"/>
+      <use href="#ground-cell" x="707.79" y="380" fill="#14614a" fill-opacity=".36"/>
+      <use href="#ground-cell" x="860.21" y="292" fill="#14614a" fill-opacity=".46"/>
+      <use href="#ground-cell" x="860.21" y="380" fill="#14614a" fill-opacity=".4"/>
+      <use href="#ground-cell" x="936.42" y="336" fill="#14614a" fill-opacity=".24"/>
+    </g>
+    <g fill="none" stroke="#8aa3c2" stroke-opacity=".5">
+      <path d="M303 202h81l323.79 187L784 433l185.33-107" stroke-dasharray="4 7"/>
+      <path d="M299 369h99l157.37 91L784 328l152.42 88h54"/>
+      <path d="M484 122h68l79.58 46L784 80h81"/>
+      <path d="M555.37 116v44m304.84 88v-46l75-43h63" stroke-dasharray="3 6"/>
+      <path d="M784 433v42m-9 0h18M784 65v30m76 153h16M556 337h-17"/>
+    </g>
+    <g fill="#9cecff">
+      <circle cx="555.37" cy="160" r="2.4" opacity=".66"/>
+      <circle cx="555.37" cy="460" r="2.4" opacity=".46"/>
+      <circle cx="631.58" cy="168" r="2.4" opacity=".6"/>
+      <circle cx="784" cy="433" r="3" opacity=".64"/>
+      <circle cx="860.21" cy="248" r="2.4" opacity=".66"/>
+      <circle cx="936.42" cy="416" r="2.4" opacity=".6"/>
+    </g>
+  </g>
+
+  <g filter="url(#tile-glow)">
+    <g fill="#38d6ff" opacity=".49">
+      <use href="#ground-cell" x="784" y="147"/>
+      <use href="#ground-cell" x="784" y="235"/>
+      <use href="#ground-cell" x="784" y="323"/>
+    </g>
+    <g fill="#3fd39a" opacity=".38">
+      <use href="#ground-cell" x="631.58" y="323"/>
+      <use href="#ground-cell" x="707.79" y="367"/>
+    </g>
+  </g>
+
+  <g transform="translate(784 135)" color="#38d6ff">
+    <use href="#tile-base"/>
+    <use href="#tile-top" fill="url(#steel)" stroke="#eefaff" stroke-width="1.7"/>
+    <use href="#tile-inset" fill="url(#cyan)" stroke="#b9f3ff"/>
+    <use href="#plate-detail"/>
+  </g>
+  <g transform="translate(784 223)" color="#38d6ff">
+    <use href="#tile-base"/>
+    <use href="#tile-top" fill="url(#steel)" stroke="#d7f6ff" stroke-width="1.6"/>
+    <use href="#tile-inset" fill="url(#cyan)" stroke="#b9f3ff"/>
+    <use href="#plate-detail"/>
+  </g>
+  <g transform="translate(784 311)" color="#38d6ff">
+    <use href="#tile-base"/>
+    <use href="#tile-top" fill="url(#steel)" stroke="#d7f6ff" stroke-width="1.6"/>
+    <use href="#tile-inset" fill="url(#cyan)" stroke="#b9f3ff"/>
+    <use href="#plate-detail"/>
+  </g>
+  <g transform="translate(631.58 311)" color="#3fd39a">
+    <use href="#tile-base"/>
+    <use href="#tile-top" fill="url(#steel)" stroke="#a7f6dd" stroke-width="1.5"/>
+    <use href="#tile-inset" fill="url(#green)" stroke="#a7f6dd"/>
+    <use href="#plate-detail"/>
+  </g>
+  <g transform="translate(707.79 355)" color="#61e7c6">
+    <use href="#tile-base"/>
+    <use href="#tile-top" fill="url(#steel)" stroke="#b4f9e7" stroke-width="1.5"/>
+    <use href="#tile-inset" fill="url(#green)" stroke="#b4f9e7"/>
+    <use href="#plate-detail"/>
+  </g>
+</svg>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="{{ language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090f13">
+  <meta name="description" content="{{ content.description }}">
+  <title>{{ content.pageTitle }}</title>
+  <link rel="canonical" href="https://fogofwarlabs.org/{{ languages[language] }}">
+  {% for code, directory in languages.items() %}
+  <link rel="alternate" hreflang="{{ code }}" href="https://fogofwarlabs.org/{{ directory }}">
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="https://fogofwarlabs.org/">
+  <link rel="icon" href="{{ prefix }}assets/branding/fogofwarlabs.svg" type="image/svg+xml">
+  <link rel="preload" href="{{ prefix }}assets/fonts/orbitron.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ prefix }}styles.css">
+  <script defer src="{{ prefix }}website.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">{{ content.skip }}</a>
+  <header class="masthead">
+    <div class="frame masthead-layout">
+      <a href="#top" class="wordmark">
+        <img src="{{ prefix }}assets/branding/fogofwarlabs.svg" width="40" height="40" alt="">
+        <span>Fog of War Labs</span>
+      </a>
+      {% macro section_links() -%}
+        <a href="#about">{{ content.about }}</a>
+        <a href="#library">{{ content.library }}</a>
+        <a href="#download">{{ content.downloadNavigation }}</a>
+      {%- endmacro %}
+      <nav class="navigation" aria-label="{{ content.navigation }}">
+        {{ section_links() }}
+      </nav>
+      <nav class="languages" aria-label="{{ content.language }}">
+        {% for code, directory in languages.items() %}
+        <a lang="{{ code }}" hreflang="{{ code }}" href="{{ prefix }}{{ directory }}" {% if language == code %}aria-current="page"{% endif %}>{{ '한국어' if code == 'ko' else 'EN' }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="about" class="engine" aria-labelledby="engine-title">
+      <div class="frame engine-layout">
+        <img class="engine-terrain" src="{{ prefix }}assets/branding/engine-grid.svg" width="1000" height="560" alt="" fetchpriority="high">
+        <div class="engine-intro">
+          <h1 id="engine-title">{{ content.aboutTitle }}</h1>
+          <p class="engine-name">Simulation Core for Java</p>
+          <p class="engine-description">{{ content.heroDescription }}</p>
+          <p class="engine-social">{{ content.socialDescription }}</p>
+        </div>
+      </div>
+    </section>
+    <section class="frame section" id="library" aria-labelledby="library-title">
+      <header class="section-header">
+        <h2 id="library-title">{{ content.library }}</h2>
+        <a class="quiet-link" href="https://github.com/fogofwarlabs/sc4j-mods">{{ content.catalog }}</a>
+      </header>
+      <div class="library">
+        <nav class="project-list" aria-label="{{ content.library }}">
+          {% for identifier, project in projects.items() %}
+          <a class="project-option" id="choose-{{ identifier }}" href="#project-{{ identifier }}">
+            {% if project.icon is defined %}
+            <img src="{{ prefix }}assets/branding/{{ project.icon }}" width="46" height="46" alt="">
+            {% else %}
+            <span class="planned-mark" aria-hidden="true"></span>
+            {% endif %}
+            <span><span class="option-name">{{ content.projects[identifier].title }}</span><span class="option-kind">{{ content.projectTypes[project.type] }}</span></span>
+          </a>
+          {% endfor %}
+        </nav>
+        <div class="project-details">
+          {% for identifier, project in projects.items() %}
+          {% set entry = content.projects[identifier] %}
+          <article class="project-panel" id="project-{{ identifier }}" aria-labelledby="name-{{ identifier }}">
+            <header class="project-banner">
+              {% if project.banner is defined %}
+              <img class="banner-art" src="{{ prefix }}assets/branding/{{ project.banner }}" alt="" width="950" height="150">
+              {% endif %}
+              <div class="banner-text">
+                <h3 id="name-{{ identifier }}">{{ entry.title }}</h3>
+                <p>{{ entry.subtitle }}</p>
+              </div>
+            </header>
+            <div class="project-body">
+              <p>{{ entry.description }}</p>
+              <p class="project-note">{{ entry.note }}</p>
+              {% if project.type == 'mod' %}
+              <label class="address-label" for="address-{{ identifier }}">{{ content.repositoryLabel }}</label>
+              <div class="address-control">
+                <input id="address-{{ identifier }}" type="text" readonly spellcheck="false" value="https://github.com/{{ project.repository }}">
+                <button type="button" class="copy-address" data-copied="{{ content.copied }}" data-manual="{{ content.selectCopy }}" hidden>
+                  <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h12v13H8zM4 16V3h12"/></svg>{{ content.copyButton }}
+                </button>
+              </div>
+              <p class="copy-status" role="status"></p>
+              <details class="mod-installation">
+                <summary>{{ content.installation }}</summary>
+                <ol class="installation-steps">
+                  {% for step in content.installSteps %}
+                  <li>{{ step }}</li>
+                  {% endfor %}
+                  <li>{{ entry.runInstruction }}</li>
+                </ol>
+                <figure class="launcher-figure">
+                  <a href="{{ prefix }}assets/guide/sc4j-mods.webp"><img src="{{ prefix }}assets/guide/sc4j-mods.webp" width="1280" height="800" loading="lazy" alt="{{ content.launcherImage }}"></a>
+                </figure>
+              </details>
+              {% endif %}
+              {% if project.repository is defined %}
+              <a class="quiet-link" href="https://github.com/{{ project.repository }}">{{ content.source }}</a>
+              {% endif %}
+              {% if identifier == 'scr' %}
+              <a class="quiet-link" href="https://github.com/fogofwarlabs/sc4j-scr/issues">{{ content.reportIssue }}</a>
+              {% endif %}
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <section class="launcher-download" id="download" aria-labelledby="download-title">
+      <div class="frame download-layout">
+        <img class="launcher-mark" src="{{ prefix }}assets/branding/sc4j.svg" width="72" height="72" alt="">
+        <div class="download-copy">
+          <h2 id="download-title">{{ content.downloadTitle }}</h2>
+          <p>{{ content.downloadInstructions }}</p>
+        </div>
+        <div class="download-action">
+          <a class="download-button" href="{{ launcher.repository }}/releases/download/v{{ launcher.version }}/SC4J-{{ launcher.version }}.zip">
+            <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
+            {{ content.download }}
+          </a>
+          <a class="quiet-link" href="{{ launcher.repository }}/releases/tag/v{{ launcher.version }}">v{{ launcher.version }} {{ content.releaseNotes }}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="frame footer-layout">
+      <a class="wordmark" href="#top"><img width="30" height="30" src="{{ prefix }}assets/branding/fogofwarlabs.svg" alt=""><span>Fog of War Labs</span></a>
+      <nav class="navigation" aria-label="{{ content.footerNavigation }}">
+        {{ section_links() }}
+      </nav>
+      <a class="quiet-link" href="https://github.com/fogofwarlabs">GitHub</a>
+      <a class="quiet-link" href="https://www.moddb.com/mods/sc4j">ModDB</a>
+      <p>{{ content.trademark }}</p>
+    </div>
+  </footer>
+</body>
+</html>

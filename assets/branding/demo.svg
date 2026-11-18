@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="512" height="512">
+  <title>SC4J demo mod icon</title>
+  <defs>
+    <linearGradient id="gold" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#fff0b0"/>
+      <stop offset="0.25" stop-color="#f2c457"/>
+      <stop offset="0.5" stop-color="#b9832a"/>
+      <stop offset="0.62" stop-color="#f6d27a"/>
+      <stop offset="1" stop-color="#7a4f17"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#3f6fe0"/>
+      <stop offset="1" stop-color="#16308a"/>
+    </linearGradient>
+    <linearGradient id="iron" x1="0.3" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#4a3c38"/>
+      <stop offset="1" stop-color="#1a1312"/>
+    </linearGradient>
+    <radialGradient id="ember" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff8a2a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="clawFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd27a"/>
+      <stop offset="0.45" stop-color="#ff7a1e"/>
+      <stop offset="1" stop-color="#c2281a"/>
+    </linearGradient>
+    <radialGradient id="sunFill" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#fff6c8"/>
+      <stop offset="0.55" stop-color="#ffd257"/>
+      <stop offset="1" stop-color="#e09a1e"/>
+    </radialGradient>
+    <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe9a0" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#ffe9a0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8eef8"/>
+      <stop offset="0.5" stop-color="#8fbcd6"/>
+      <stop offset="1" stop-color="#5f8fb0"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="field"><path d="M40 50 Q130 28 220 50 L216 128 Q208 200 130 242 Q52 200 44 128 Z" transform="translate(130 138) scale(0.86) translate(-130 -138)"/></clipPath>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.4"/></filter>
+  </defs>
+  <path d="M40 50 Q130 28 220 50 L216 128 Q208 200 130 242 Q52 200 44 128 Z" transform="translate(2 6)" fill="#000000" opacity="0.45" filter="url(#shadow)"/>
+  <path d="M40 50 Q130 28 220 50 L216 128 Q208 200 130 242 Q52 200 44 128 Z" fill="url(#gold)" stroke="#3a2608" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M40 50 Q130 28 220 50 L216 128 Q208 200 130 242 Q52 200 44 128 Z" transform="translate(130 138) scale(0.86) translate(-130 -138)" fill="#3a2608" stroke="#3a2608" stroke-width="5" stroke-linejoin="round"/>
+  <g clip-path="url(#field)">
+    <rect x="0" y="0" width="260" height="260" fill="url(#blue)"/>
+    <circle cx="98" cy="100" r="62" fill="url(#sunGlow)"/>
+    <path d="M93.8 73.3 L94.1 55.2 L101.9 55.2 L102.2 73.3 Z M113.9 78.2 L127.0 65.6 L132.4 71.0 L119.8 84.1 Z M124.7 95.8 L142.8 96.1 L142.8 103.9 L124.7 104.2 Z M119.8 115.9 L132.4 129.0 L127.0 134.4 L113.9 121.8 Z M102.2 126.7 L101.9 144.8 L94.1 144.8 L93.8 126.7 Z M82.1 121.8 L69.0 134.4 L63.6 129.0 L76.2 115.9 Z M71.3 104.2 L53.2 103.9 L53.2 96.1 L71.3 95.8 Z M76.2 84.1 L63.6 71.0 L69.0 65.6 L82.1 78.2 Z" fill="#f6c94e"/>
+    <circle cx="98" cy="100" r="21" fill="url(#sunFill)" stroke="#b9791a" stroke-width="1.5"/>
+    <path d="M246 46 C204 92 176 112 138 138 S66 190 14 248 L-40 300 L300 300 L300 46 Z" fill="url(#iron)"/>
+    <circle cx="158" cy="174" r="64" fill="url(#ember)"/>
+    <g fill="#ff7a1e" opacity="0.7" filter="url(#glow)">
+      <path d="M119.3 164.2 Q119.2 194.8 144.7 211.8 Q130.5 188.8 119.3 164.2 Z"/>
+      <path d="M137.3 152.2 Q137.2 182.8 162.7 199.8 Q148.5 176.8 137.3 152.2 Z"/>
+      <path d="M155.3 140.2 Q155.2 170.8 180.7 187.8 Q166.5 164.8 155.3 140.2 Z"/>
+    </g>
+    <g fill="url(#clawFill)" stroke="#5a1408" stroke-width="1.2" stroke-linejoin="round">
+      <path d="M119.3 164.2 Q119.2 194.8 144.7 211.8 Q130.5 188.8 119.3 164.2 Z"/>
+      <path d="M137.3 152.2 Q137.2 182.8 162.7 199.8 Q148.5 176.8 137.3 152.2 Z"/>
+      <path d="M155.3 140.2 Q155.2 170.8 180.7 187.8 Q166.5 164.8 155.3 140.2 Z"/>
+    </g>
+    <path d="M246 46 C204 92 176 112 138 138 S66 190 14 248" fill="none" stroke="#1d2f45" stroke-width="22"/>
+    <path d="M246 46 C204 92 176 112 138 138 S66 190 14 248" fill="none" stroke="url(#water)" stroke-width="16"/>
+    <path d="M246 46 C204 92 176 112 138 138 S66 190 14 248" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2" transform="translate(-3 -3)"/>
+    <rect x="0" y="0" width="260" height="260" fill="url(#sheen)"/>
+  </g>
+  <path d="M40 50 Q130 28 220 50 L216 128 Q208 200 130 242 Q52 200 44 128 Z" transform="translate(130 138) scale(0.86) translate(-130 -138)" fill="none" stroke="#fff2c0" stroke-opacity="0.35" stroke-width="1.2"/>
+  <g fill="url(#gold)" stroke="#3a2608" stroke-width="1.6">
+    <circle cx="52" cy="58" r="6.5"/>
+    <circle cx="208" cy="58" r="6.5"/>
+    <circle cx="130" cy="44" r="6.5"/>
+    <circle cx="130" cy="231" r="6.5"/>
+  </g>
+</svg>

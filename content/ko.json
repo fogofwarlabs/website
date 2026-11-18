@@ -1,0 +1,61 @@
+{
+  "pageTitle": "Fog of War Labs | SC4J 엔진과 모드",
+  "description": "Fog of War Labs의 오픈소스 RTS 엔진 SC4J와 모드를 만나보세요. 런처를 내려받아 기본 데모를 플레이하거나 SC:R과 SC:R CrossOver를 설치할 수 있습니다.",
+  "skip": "본문으로 이동",
+  "navigation": "주 메뉴",
+  "language": "언어 선택",
+  "about": "SC4J 소개",
+  "aboutTitle": "SC4J란?",
+  "library": "모드 갤러리",
+  "installation": "런처에서 설치하는 법",
+  "heroDescription": "SC4J는 Fog of War Labs가 Java로 개발하는 오픈소스 실시간 전략 게임 엔진입니다. 유닛의 이동과 전투, 화면 렌더링, 리플레이를 처리합니다. 게임은 모드로 배포되며 하나의 런처에서 골라 실행할 수 있습니다.",
+  "socialDescription": "런처는 플레이어가 만나는 소셜 플랫폼이기도 합니다. 각 런처가 탈중앙화 네트워크 Beacon.Link의 피어로 연결되어, 친구의 접속 상태를 확인하고 채팅하거나 함께 플레이할 방을 찾을 수 있습니다.",
+  "downloadNavigation": "다운로드",
+  "downloadTitle": "SC4J 런처 다운로드",
+  "download": "Windows용 ZIP 받기",
+  "downloadInstructions": "Windows용 ZIP 파일을 내려받아 압축을 풀고 SC4J.exe를 실행하세요. Java 런타임이 포함되어 있습니다.",
+  "source": "소스 코드",
+  "catalog": "런처 모드 목록",
+  "projectTypes": {"mod": "모드", "planned": "개발 예정", "bundled": "기본 포함"},
+  "copyButton": "복사",
+  "copied": "복사했습니다",
+  "selectCopy": "주소를 선택했습니다. 복사해서 런처에 붙여 넣으세요.",
+  "repositoryLabel": "런처에 입력할 GitHub 저장소",
+  "projects": {
+    "scr": {
+      "title": "SC:R",
+      "subtitle": "스타크래프트: 리마스터",
+      "description": "스타크래프트: 리마스터의 게임 규칙을 SC4J에 구현한 모드입니다. 커뮤니티가 제보한 맵과 리플레이를 바탕으로 EUD 동작 차이, 크래시, 디싱크를 재현하고 수정합니다.",
+      "note": "원본 스타크래프트: 리마스터 설치가 필요합니다. 지원 빌드는 1.23.10입니다.",
+      "runInstruction": "설치한 스타크래프트: 리마스터를 선택하세요. 폴더가 자동으로 감지되지 않으면 설정에서 스타크래프트: 리마스터 폴더의 찾아보기를 눌러 .build.info가 있는 원본 설치 폴더를 지정하세요. 그다음 실행을 누르세요."
+    },
+    "crossover": {
+      "title": "SC:R CrossOver",
+      "subtitle": "SC:R 기반 게임플레이 모드",
+      "description": "해병의 능력치를 조정하고 테란의 Unity-chan과 저그의 Myriarch를 추가했습니다. SC:R 소스에 변경분을 적용한 별도 모드입니다.",
+      "note": "원본 스타크래프트: 리마스터 설치가 필요합니다.",
+      "runInstruction": "설치한 SC:R Crossover를 선택하세요. 게임 폴더 설정은 SC:R과 공유합니다. 설정의 스타크래프트: 리마스터 폴더가 비어 있으면 찾아보기를 눌러 .build.info가 있는 원본 설치 폴더를 지정하세요. 그다음 실행을 누르세요."
+    },
+    "extended": {
+      "title": "SC:R Extended",
+      "subtitle": "SC:R 기반 확장 패치",
+      "description": "기존 게임 명령을 활용한 자동 채집부터 검토합니다. EUD 트리거를 통한 GRP 기능 복구와 클라이언트 롤백 넷코드도 개발 후보입니다.",
+      "note": "CrossOver와 같은 방식으로 SC:R 소스에 변경분을 적용할 계획입니다."
+    },
+    "demo": {
+      "title": "던홀드와 신더모",
+      "subtitle": "SC4J RTS 데모",
+      "description": "던홀드와 신더모가 맞붙는 실시간 전략 데모입니다.",
+      "note": "SC4J에 포함되어 있습니다. 런처의 모드 탭에서 SC4J 데모: 던홀드와 신더모를 선택하고 실행을 누르세요."
+    }
+  },
+  "installSteps": [
+    "이 모드의 주소를 복사하세요. 런처의 모드 탭에서 모드 설치를 열고 GitHub 저장소 칸에 붙여 넣으세요.",
+    "다음을 누르세요. 표시된 모드 이름과 릴리스 버전을 확인한 뒤 설치를 누르세요."
+  ],
+  "launcherImage": "SC4J v0.1.5 런처의 모드 탭. 왼쪽 아래에 모드 설치, 오른쪽에 원본 폴더 설정과 실행 버튼이 있습니다.",
+  "releaseNotes": "릴리스 공지",
+  "reportIssue": "SC:R 호환성 문제 제보",
+  "footerNavigation": "페이지 하단 메뉴",
+  "trademark": "StarCraft는 Blizzard Entertainment의 상표입니다."
+}

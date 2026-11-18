@@ -1,0 +1,61 @@
+{
+  "pageTitle": "Fog of War Labs | SC4J engine and mods",
+  "description": "Explore SC4J, the open-source RTS engine from Fog of War Labs. Get the launcher to play the included demo or install SC:R and SC:R CrossOver.",
+  "skip": "Skip to content",
+  "navigation": "Main navigation",
+  "language": "Choose language",
+  "about": "About SC4J",
+  "aboutTitle": "What is SC4J?",
+  "library": "Mod gallery",
+  "installation": "Install in the launcher",
+  "heroDescription": "SC4J is the open-source real-time strategy engine we build at Fog of War Labs. Written in Java, it handles unit movement, combat, rendering, and replays. Games ship as mods you can choose and run from a single launcher.",
+  "socialDescription": "The launcher is also where players meet. Each launcher joins Beacon.Link as a peer on a decentralized network. You can see which friends are online, chat, and find a room to play together.",
+  "downloadNavigation": "Download",
+  "downloadTitle": "Download the SC4J launcher",
+  "download": "Download for Windows",
+  "downloadInstructions": "Download the Windows ZIP, extract it, and run SC4J.exe. The package includes a Java runtime.",
+  "source": "Source code",
+  "catalog": "Launcher catalog",
+  "projectTypes": {"mod": "Mod", "planned": "Planned", "bundled": "Included"},
+  "copyButton": "Copy",
+  "copied": "Copied",
+  "selectCopy": "Address selected. Copy it and paste it into the launcher.",
+  "repositoryLabel": "GitHub repository for the launcher",
+  "projects": {
+    "scr": {
+      "title": "SC:R",
+      "subtitle": "StarCraft: Remastered",
+      "description": "SC:R brings the rules of StarCraft: Remastered to SC4J. We use maps and replays from the community to reproduce and fix EUD behavior differences, crashes, and desyncs.",
+      "note": "Requires your own StarCraft: Remastered installation. Supported build 1.23.10.",
+      "runInstruction": "Select StarCraft: Remastered in the mod list. If the game folder isn't detected, click Browse next to StarCraft: Remastered folder and choose the original installation folder containing .build.info. Then click Run."
+    },
+    "crossover": {
+      "title": "SC:R CrossOver",
+      "subtitle": "Gameplay mod based on SC:R",
+      "description": "CrossOver adjusts Marine stats and adds two units, the Terran Unity-chan and the Zerg Myriarch. It overlays those changes on the SC:R source to build a standalone mod.",
+      "note": "Requires your own StarCraft: Remastered installation.",
+      "runInstruction": "Select SC:R Crossover in the mod list. It shares the SC:R game folder setting. If StarCraft: Remastered folder is blank, click Browse and choose the original installation folder containing .build.info. Then click Run."
+    },
+    "extended": {
+      "title": "SC:R Extended",
+      "subtitle": "Planned SC:R patch",
+      "description": "The first area of investigation is auto-mining through existing game commands. We also plan to explore restoring GRP support through EUD triggers and adding client-side rollback netcode.",
+      "note": "Extended is planned as an overlay on the SC:R source, following the approach used by CrossOver."
+    },
+    "demo": {
+      "title": "Dawnhold and Cindermaw",
+      "subtitle": "SC4J RTS demo",
+      "description": "Play Dawnhold against Cindermaw in a real-time strategy demo built on SC4J.",
+      "note": "Included with SC4J. Under Mods in the launcher, select SC4J Demo: Dawnhold and Cindermaw and click Run."
+    }
+  },
+  "installSteps": [
+    "Copy this mod's address. In the launcher's Mods tab, click Install mod and paste it into the GitHub repository field.",
+    "Click Next. Check the mod name and release version, then click Install."
+  ],
+  "launcherImage": "SC4J v0.1.5 Mods tab with Install mod at the lower left, the original game folder setting on the right and Run at the lower right.",
+  "releaseNotes": "Release notes",
+  "reportIssue": "Report an SC:R compatibility issue",
+  "footerNavigation": "Footer navigation",
+  "trademark": "StarCraft is a trademark of Blizzard Entertainment."
+}
