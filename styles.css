@@ -199,7 +199,7 @@ h2, .project-banner h3 {
   .engine-intro { width: min(100%, 440px); padding-block: 30px; }
   .engine h1 { max-width: 70%; font-size: clamp(30px, 7.6vw, 46px); }
   .engine-name { font-size: 10px; letter-spacing: .12em; }
-  .engine-terrain { top: -20px; right: -11%; transform: none; width: min(76%, 400px); }
+  .engine-terrain { top: -20px; right: -6%; transform: none; width: min(76%, 400px); }
   .engine-description { margin-top: 30px; }
   .section { padding-block: 31px 36px; }
   .library { display: block; }
@@ -217,7 +217,7 @@ h2, .project-banner h3 {
 }
 @media (max-width: 460px) {
   .engine-layout { min-height: 0; }
-  .engine-terrain { top: -25px; right: -13%; width: 82%; }
+  .engine-terrain { top: -25px; width: 82%; }
   .engine-description { margin-top: 38px; }
   .engine-name { max-width: 200px; }
   .address-control input { font-size: 11px; }

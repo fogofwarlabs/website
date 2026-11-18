@@ -1,12 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
   <defs>
-    <radialGradient id="field-fade" cx="730" cy="284" r="497" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 88) scale(1 .69)">
+    <radialGradient id="field-fade" cx="730" cy="284" r="497" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 136.32) scale(1 .52)">
       <stop offset="0" stop-color="white"/>
       <stop offset=".48" stop-color="white" stop-opacity=".72"/>
       <stop offset="1" stop-color="white" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="field-right-fade">
+      <stop offset=".86" stop-color="white"/>
+      <stop offset=".88" stop-color="white" stop-opacity=".84"/>
+      <stop offset=".90" stop-color="white" stop-opacity=".50"/>
+      <stop offset=".92" stop-color="white" stop-opacity=".16"/>
+      <stop offset=".94" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="field-right-mask" x="0" y="0" width="1000" height="560" maskUnits="userSpaceOnUse">
+      <path d="M0 0h1000v560H0z" fill="url(#field-right-fade)"/>
+    </mask>
     <mask id="field-mask" x="0" y="0" width="1000" height="560" maskUnits="userSpaceOnUse">
-      <path d="M0 0h1000v560H0z" fill="url(#field-fade)"/>
+      <path d="M0 0h1000v560H0z" fill="url(#field-fade)" mask="url(#field-right-mask)"/>
     </mask>
     <radialGradient id="terrain-light" cx="739" cy="266" r="344" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 101) scale(1 .62)">
       <stop offset="0" stop-color="#14614a" stop-opacity=".65"/>
