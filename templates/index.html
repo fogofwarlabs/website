@@ -79,12 +79,19 @@
               {% endif %}
               <div class="banner-text">
                 <h3 id="name-{{ identifier }}">{{ entry.title }}</h3>
+                {% if entry.subtitle is defined %}
                 <p>{{ entry.subtitle }}</p>
+                {% endif %}
               </div>
             </header>
             <div class="project-body">
               <p>{{ entry.description }}</p>
+              {% if entry.note is defined %}
               <p class="project-note">{{ entry.note }}</p>
+              {% endif %}
+              {% for link in entry.links | default([]) %}
+              <a class="quiet-link" href="{{ link.url }}">{{ link.label }}</a>
+              {% endfor %}
               {% if project.type == 'mod' %}
               <label class="address-label" for="address-{{ identifier }}">{{ content.repositoryLabel }}</label>
               <div class="address-control">

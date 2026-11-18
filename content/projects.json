@@ -19,5 +19,10 @@
   },
   "extended": {
     "type": "planned"
+  },
+  "more": {
+    "type": "guide",
+    "icon": "sc4j.svg",
+    "banner": "sc4j-banner.svg"
   }
 }

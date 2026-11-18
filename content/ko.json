@@ -1,5 +1,5 @@
 {
-  "pageTitle": "Fog of War Labs | SC4J 엔진과 모드",
+  "pageTitle": "Fog of War Labs",
   "description": "Fog of War Labs의 오픈소스 RTS 엔진 SC4J와 모드를 만나보세요. 런처를 내려받아 기본 데모를 플레이하거나 SC:R과 SC:R CrossOver를 설치할 수 있습니다.",
   "skip": "본문으로 이동",
   "navigation": "주 메뉴",
@@ -15,8 +15,8 @@
   "download": "Windows용 ZIP 받기",
   "downloadInstructions": "Windows용 ZIP 파일을 내려받아 압축을 풀고 SC4J.exe를 실행하세요. Java 런타임이 포함되어 있습니다.",
   "source": "소스 코드",
-  "catalog": "런처 모드 목록",
-  "projectTypes": {"mod": "모드", "planned": "개발 예정", "bundled": "기본 포함"},
+  "catalog": "공식 모드 목록",
+  "projectTypes": {"mod": "모드", "planned": "개발 예정", "bundled": "기본 포함", "guide": "모드 제작"},
   "copyButton": "복사",
   "copied": "복사했습니다",
   "selectCopy": "주소를 선택했습니다. 복사해서 런처에 붙여 넣으세요.",
@@ -47,6 +47,14 @@
       "subtitle": "SC4J RTS 데모",
       "description": "던홀드와 신더모가 맞붙는 실시간 전략 데모입니다.",
       "note": "SC4J에 포함되어 있습니다. 런처의 모드 탭에서 SC4J 데모: 던홀드와 신더모를 선택하고 실행을 누르세요."
+    },
+    "more": {
+      "title": "더 많은 모드",
+      "description": "나만의 유닛이나 전투 규칙을 만들고 싶다면 모드 템플릿으로 시작해 보세요. 만든 모드는 SC4J 런처에 설치해 직접 플레이할 수 있습니다. 친구와 공유할 때는 GitHub에 릴리스를 올리고 저장소 주소를 보내면 됩니다.",
+      "links": [
+        {"label": "모드 템플릿", "url": "https://github.com/fogofwarlabs/sc4j-mod-template/blob/main/README.ko.md"},
+        {"label": "모드 제작 가이드", "url": "https://github.com/fogofwarlabs/sc4j/blob/main/docs/mod-guide.ko.md"}
+      ]
     }
   },
   "installSteps": [

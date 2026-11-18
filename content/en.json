@@ -1,5 +1,5 @@
 {
-  "pageTitle": "Fog of War Labs | SC4J engine and mods",
+  "pageTitle": "Fog of War Labs",
   "description": "Explore SC4J, the open-source RTS engine from Fog of War Labs. Get the launcher to play the included demo or install SC:R and SC:R CrossOver.",
   "skip": "Skip to content",
   "navigation": "Main navigation",
@@ -15,8 +15,8 @@
   "download": "Download for Windows",
   "downloadInstructions": "Download the Windows ZIP, extract it, and run SC4J.exe. The package includes a Java runtime.",
   "source": "Source code",
-  "catalog": "Launcher catalog",
-  "projectTypes": {"mod": "Mod", "planned": "Planned", "bundled": "Included"},
+  "catalog": "Official mod list",
+  "projectTypes": {"mod": "Mod", "planned": "Planned", "bundled": "Included", "guide": "Mod development"},
   "copyButton": "Copy",
   "copied": "Copied",
   "selectCopy": "Address selected. Copy it and paste it into the launcher.",
@@ -47,6 +47,14 @@
       "subtitle": "SC4J RTS demo",
       "description": "Play Dawnhold against Cindermaw in a real-time strategy demo built on SC4J.",
       "note": "Included with SC4J. Under Mods in the launcher, select SC4J Demo: Dawnhold and Cindermaw and click Run."
+    },
+    "more": {
+      "title": "More mods",
+      "description": "Add a unit of your own or build an RTS with a different set of rules. You can play your mod in the SC4J launcher. Once you publish a GitHub release, friends can install it from your repository address.",
+      "links": [
+        {"label": "Mod template", "url": "https://github.com/fogofwarlabs/sc4j-mod-template"},
+        {"label": "Mod author guide", "url": "https://github.com/fogofwarlabs/sc4j/blob/main/docs/mod-guide.md"}
+      ]
     }
   },
   "installSteps": [
