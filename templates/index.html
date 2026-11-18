@@ -134,11 +134,10 @@
           <p>{{ content.downloadInstructions }}</p>
         </div>
         <div class="download-action">
-          <a class="download-button" href="{{ launcher.repository }}/releases/download/v{{ launcher.version }}/SC4J-{{ launcher.version }}.zip">
-            <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
+          <a class="download-button" href="{{ launcher.repository }}/releases">
             {{ content.download }}
           </a>
-          <a class="quiet-link" href="{{ launcher.repository }}/releases/tag/v{{ launcher.version }}">v{{ launcher.version }} {{ content.releaseNotes }}</a>
+          <a class="quiet-link" href="{{ launcher.repository }}/releases/latest">{{ content.releaseNotes }}</a>
         </div>
       </div>
     </section>

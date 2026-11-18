@@ -2,7 +2,7 @@
 
 Project library and launcher installation guide for SC4J. Korean is served at `/` and English at `/en/`. Both pages are generated as static HTML.
 
-Edit mod repository addresses in `content/projects.json`, the downloadable Windows release in `content/launcher.json`, and the copy in `content/ko.json` and `content/en.json`. Build and preview from the repository root:
+Edit mod repository addresses in `content/projects.json`, the launcher repository address in `content/launcher.json`, and the copy in `content/ko.json` and `content/en.json`. Build and preview from the repository root:
 
 ```sh
 python -m pip install -r requirements.txt
