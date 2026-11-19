@@ -20,6 +20,10 @@
   "copyButton": "Copy",
   "copied": "Address copied",
   "selectCopy": "Copy the selected address and paste it into the launcher.",
+  "screenshots": "Screenshots",
+  "closeScreenshot": "Close",
+  "previousScreenshot": "Previous screenshot",
+  "nextScreenshot": "Next screenshot",
   "repositoryLabel": "GitHub repository URL",
   "projects": {
     "scr": {
@@ -34,6 +38,7 @@
       "subtitle": "SC:R patch with extra features",
       "description": "SC:R with convenience and extension features: EUD GRP support, EUD ANIM support for HD and HD2 graphics, fast map download over Beacon.Link, and more.",
       "note": "Requires an installed copy of StarCraft: Remastered.",
+      "screenshots": ["A 1.16 EUD map drawing the GRPs it writes to memory", "An EUD map replacing the Marine's HD graphics with an anim"],
       "runInstruction": "Select SC:R Enhanced in the mod list. It uses the same game folder setting as SC:R. If the StarCraft: Remastered folder field is empty, click Browse and choose the installation folder containing .build.info. Then click Run."
     },
     "crossover": {

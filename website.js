@@ -65,3 +65,54 @@ for (const button of document.querySelectorAll(".copy-address")) {
     }
   });
 }
+
+for (const strip of document.querySelectorAll(".screenshot-strip")) {
+  const gallery = strip.querySelector(".screenshot-gallery");
+  const previous = strip.querySelector(".slide-previous");
+  const next = strip.querySelector(".slide-next");
+  const updateButtons = () => {
+    previous.hidden = gallery.scrollLeft <= 1;
+    next.hidden = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 1;
+  };
+  previous.addEventListener("click", () => gallery.scrollBy({left: -gallery.clientWidth}));
+  next.addEventListener("click", () => gallery.scrollBy({left: gallery.clientWidth}));
+  gallery.addEventListener("scroll", updateButtons, {passive: true});
+  new ResizeObserver(updateButtons).observe(gallery);
+}
+
+const viewer = document.querySelector(".screenshot-viewer");
+const viewerImage = viewer.querySelector("img");
+const viewerCount = viewer.querySelector(".viewer-count");
+let viewerShots = [];
+let viewerIndex = 0;
+
+function showScreenshot(index) {
+  viewerIndex = (index + viewerShots.length) % viewerShots.length;
+  const link = viewerShots[viewerIndex];
+  viewerImage.src = link.href;
+  viewerImage.alt = link.querySelector("img").alt;
+  viewerCount.textContent = `${viewerIndex + 1} / ${viewerShots.length}`;
+  const single = viewerShots.length < 2;
+  viewer.querySelector(".viewer-previous").hidden = single;
+  viewer.querySelector(".viewer-next").hidden = single;
+  viewerCount.hidden = single;
+}
+
+for (const link of document.querySelectorAll(".screenshot")) {
+  link.addEventListener("click", event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    viewerShots = Array.from(link.closest(".screenshot-gallery").querySelectorAll(".screenshot"));
+    showScreenshot(viewerShots.indexOf(link));
+    viewer.showModal();
+  });
+}
+viewer.querySelector(".viewer-previous").addEventListener("click", () => showScreenshot(viewerIndex - 1));
+viewer.querySelector(".viewer-next").addEventListener("click", () => showScreenshot(viewerIndex + 1));
+viewer.addEventListener("keydown", event => {
+  if (event.key === "ArrowLeft") showScreenshot(viewerIndex - 1);
+  if (event.key === "ArrowRight") showScreenshot(viewerIndex + 1);
+});
+viewer.addEventListener("click", event => {
+  if (event.target === viewer || event.target === viewerImage || event.target.closest(".viewer-close")) viewer.close();
+});

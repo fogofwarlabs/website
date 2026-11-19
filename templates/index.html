@@ -89,6 +89,17 @@
               {% if entry.note is defined %}
               <p class="project-note">{{ entry.note }}</p>
               {% endif %}
+              {% if project.screenshots is defined %}
+              <div class="screenshot-strip">
+                <ul class="screenshot-gallery" aria-label="{{ content.screenshots }}">
+                  {% for shot in project.screenshots %}
+                  <li><a class="screenshot" href="{{ prefix }}assets/screenshots/{{ shot }}.webp"><img src="{{ prefix }}assets/screenshots/{{ shot }}-thumb.webp" width="640" height="400" loading="lazy" alt="{{ entry.screenshots[loop.index0] }}"></a></li>
+                  {% endfor %}
+                </ul>
+                <button type="button" class="slide-button slide-previous" aria-label="{{ content.previousScreenshot }}" hidden>&lsaquo;</button>
+                <button type="button" class="slide-button slide-next" aria-label="{{ content.nextScreenshot }}" hidden>&rsaquo;</button>
+              </div>
+              {% endif %}
               {% for link in entry.links | default([]) %}
               <a class="quiet-link" href="{{ link.url }}">{{ link.label }}</a>
               {% endfor %}
@@ -153,5 +164,12 @@
       <p>{{ content.trademark }}</p>
     </div>
   </footer>
+  <dialog class="screenshot-viewer" aria-label="{{ content.screenshots }}">
+    <img alt="">
+    <button type="button" class="slide-button viewer-previous" aria-label="{{ content.previousScreenshot }}">&lsaquo;</button>
+    <button type="button" class="slide-button viewer-next" aria-label="{{ content.nextScreenshot }}">&rsaquo;</button>
+    <button type="button" class="viewer-close" aria-label="{{ content.closeScreenshot }}">&times;</button>
+    <p class="viewer-count" aria-live="polite"></p>
+  </dialog>
 </body>
 </html>

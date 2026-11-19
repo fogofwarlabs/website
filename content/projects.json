@@ -9,7 +9,8 @@
     "type": "mod",
     "repository": "fogofwarlabs/sc4j-scr-enhanced",
     "icon": "scr-enhanced.svg",
-    "banner": "scr-enhanced-banner.svg"
+    "banner": "scr-enhanced-banner.svg",
+    "screenshots": ["scr-enhanced-eud-grp", "scr-enhanced-eud-anim"]
   },
   "crossover": {
     "type": "mod",

@@ -158,6 +158,26 @@ h2, .project-banner h3 {
 .installation-steps li { padding-left: 7px; }
 .installation-steps li + li { margin-top: 7px; }
 .installation-steps li::marker { color: #7bd6ea; font: 600 18px var(--body); }
+.screenshot-strip { position: relative; margin-top: 15px; }
+.screenshot-gallery { display: flex; gap: 10px; margin: 0; padding: 0 0 6px; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: #415963 transparent; }
+.screenshot-gallery li { flex: 0 0 208px; scroll-snap-align: start; }
+.slide-button { position: absolute; z-index: 1; width: 32px; height: 32px; border: 1px solid #415963; background: #0b1115e6; color: #c8e6ed; font-size: 24px; line-height: 1; }
+.slide-button:hover { color: var(--cyan); border-color: #77e0f7; }
+.screenshot-strip .slide-button { top: calc(50% - 3px); transform: translateY(-50%); }
+.slide-previous { left: 6px; }
+.slide-next { right: 6px; }
+.screenshot { display: block; border: 1px solid #3a4b53; }
+.screenshot:hover, .screenshot:focus-visible { border-color: #77e0f7; }
+.screenshot img { display: block; width: 100%; height: auto; }
+.screenshot-viewer { padding: 0; border: 1px solid #415963; background: #05090c; max-width: 94vw; max-height: 92vh; overflow: hidden; }
+.screenshot-viewer::backdrop { background: #000000d0; }
+.screenshot-viewer img { display: block; width: auto; height: auto; max-width: min(1280px, 94vw); max-height: 92vh; cursor: zoom-out; }
+.viewer-previous, .viewer-next { top: 50%; transform: translateY(-50%); width: 40px; height: 40px; font-size: 28px; }
+.viewer-previous { left: 8px; }
+.viewer-next { right: 8px; }
+.viewer-count { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); padding: 2px 9px; background: #0b1115e6; color: #c8e6ed; font-size: .82em; }
+.viewer-close { position: absolute; top: 8px; right: 8px; width: 34px; height: 34px; border: 1px solid #415963; background: #0b1115e6; color: #c8e6ed; font-size: 22px; line-height: 1; }
+.viewer-close:hover { color: var(--cyan); border-color: #77e0f7; }
 .launcher-figure { max-width: 420px; margin: 16px 0 6px; }
 .launcher-figure img { width: 100%; height: auto; border: 1px solid #3a4b53; }
 .launcher-download {
@@ -212,6 +232,7 @@ h2, .project-banner h3 {
   .option-name { font-size: clamp(10px, 2.35vw, 14px); }
   .project-banner { min-height: 87px; padding: 13px 14px; }
   .project-body { padding: 14px; }
+  .screenshot-gallery li { flex-basis: calc(50% - 5px); }
   .installation-steps { padding-left: 23px; }
   .download-layout { grid-template-columns: auto 1fr; align-items: start; padding-block: 30px; }
   .launcher-mark { width: 44px; height: 44px; }
