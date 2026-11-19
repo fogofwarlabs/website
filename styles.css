@@ -203,8 +203,10 @@ h2, .project-banner h3 {
   .engine-description { margin-top: 30px; }
   .section { padding-block: 31px 36px; }
   .library { display: block; }
-  .project-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-right: 0; border-bottom: 1px solid var(--border); gap: 3px; }
+  .project-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-right: 0; border-bottom: 1px solid var(--border); gap: 3px 0; }
   .project-option:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .project-option + .project-option:not([aria-selected="true"]) { border-top-color: transparent; }
+  .project-option:nth-child(n+3):not([aria-selected="true"]) { box-shadow: 0 -1px #233237; }
   .project-option { min-height: 49px; padding: 5px; }
   .project-option img, .planned-mark { width: 32px; height: 32px; }
   .option-name { font-size: clamp(10px, 2.35vw, 14px); }
