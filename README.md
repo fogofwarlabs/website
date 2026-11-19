@@ -12,4 +12,4 @@ python -m http.server 4173 --bind 127.0.0.1 --directory _site
 
 GitHub Actions publishes the static site to GitHub Pages when changes are pushed to `main`. The custom domain `fogofwarlabs.org` is configured in the repository’s Pages settings.
 
-Branding comes from the [SC4J](https://github.com/fogofwarlabs/sc4j/tree/main/docs/branding) and [SC:R](https://github.com/fogofwarlabs/sc4j-scr/tree/main/docs/branding) repositories. SC:R CrossOver shares the SC:R mark. The guide illustrates the Mods tab with an image from the [SC4J v0.1.5 release announcement](https://www.moddb.com/mods/sc4j/news/sc4j-v015-released).
+Branding comes from the [SC4J](https://github.com/fogofwarlabs/sc4j/tree/main/docs/branding) and [SC:R](https://github.com/fogofwarlabs/sc4j-scr/tree/main/docs/branding) repositories. SC:R CrossOver shares the SC:R mark. SC:R Enhanced has its own mark from the [SC:R Enhanced](https://github.com/fogofwarlabs/sc4j-scr-enhanced/tree/main/docs/branding) repository. The guide illustrates the Mods tab with an image from the [SC4J v0.1.5 release announcement](https://www.moddb.com/mods/sc4j/news/sc4j-v015-released).

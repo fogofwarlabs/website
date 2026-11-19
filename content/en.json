@@ -29,18 +29,19 @@
       "note": "Requires an installed copy of StarCraft: Remastered (build 1.23.10).",
       "runInstruction": "Select StarCraft: Remastered in the mod list. If the StarCraft: Remastered folder field is empty, click Browse and choose the game's installation folder containing .build.info. Then click Run."
     },
+    "enhanced": {
+      "title": "SC:R Enhanced",
+      "subtitle": "SC:R patch with extra features",
+      "description": "SC:R with convenience and extension features: EUD GRP support, EUD ANIM support for HD and HD2 graphics, fast map download over Beacon.Link, and more.",
+      "note": "Requires an installed copy of StarCraft: Remastered.",
+      "runInstruction": "Select SC:R Enhanced in the mod list. It uses the same game folder setting as SC:R. If the StarCraft: Remastered folder field is empty, click Browse and choose the installation folder containing .build.info. Then click Run."
+    },
     "crossover": {
       "title": "SC:R CrossOver",
       "subtitle": "Gameplay mod based on SC:R",
       "description": "CrossOver changes Marine stats and adds the Terran Unity-chan and the Zerg Myriarch. It's a standalone mod built from patched SC:R source code.",
       "note": "Requires an installed copy of StarCraft: Remastered.",
       "runInstruction": "Select SC:R Crossover in the mod list. It uses the same game folder setting as SC:R. If the StarCraft: Remastered folder field is empty, click Browse and choose the installation folder containing .build.info. Then click Run."
-    },
-    "extended": {
-      "title": "SC:R Extended",
-      "subtitle": "Planned SC:R patch",
-      "description": "We plan to look at auto-mining with existing game commands first. We're also considering restoring GRP support through EUD triggers and experimenting with client-side rollback netcode.",
-      "note": "Like CrossOver, Extended would apply its changes as a patch to the SC:R source."
     },
     "demo": {
       "title": "Dawnhold and Cindermaw",

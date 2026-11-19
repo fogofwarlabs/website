@@ -5,6 +5,12 @@
     "icon": "scr.svg",
     "banner": "scr-banner.svg"
   },
+  "enhanced": {
+    "type": "mod",
+    "repository": "fogofwarlabs/sc4j-scr-enhanced",
+    "icon": "scr-enhanced.svg",
+    "banner": "scr-enhanced-banner.svg"
+  },
   "crossover": {
     "type": "mod",
     "repository": "fogofwarlabs/sc4j-scr-crossover",
@@ -16,9 +22,6 @@
     "repository": "fogofwarlabs/sc4j/tree/main/mods/demo",
     "icon": "demo.svg",
     "banner": "demo-banner.svg"
-  },
-  "extended": {
-    "type": "planned"
   },
   "more": {
     "type": "guide",
